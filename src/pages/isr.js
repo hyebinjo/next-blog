@@ -1,14 +1,14 @@
 import Head from 'next/head'
 
 export async function getStaticProps() {
-    console.log('server')
-    return {
-      props: {time: new Date().toISOString()},
-      revalidate: 1,
-    }
+  console.log('server')
+  return {
+    props: { time: new Date().toISOString() },
+    revalidate: 1,
   }
+}
 
-export default function ISR({time}) {
+export default function ISR({ time }) {
   return (
     <div className="container">
       <Head>
@@ -17,9 +17,7 @@ export default function ISR({time}) {
       </Head>
 
       <main>
-        <h1 className="title">
-          {time}
-        </h1>
+        <h1 className="title">{time}</h1>
       </main>
 
       <footer>
@@ -28,8 +26,7 @@ export default function ISR({time}) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
+          Powered by <img src="/vercel.svg" alt="Vercel" className="logo" />
         </a>
       </footer>
 

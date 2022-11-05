@@ -1,20 +1,18 @@
-import Layout from "../components/Layout"
-import SubLayout from "../components/SubLayout"
+import Layout from '../components/Layout'
+import SubLayout from '../components/SubLayout'
 
 export async function getStaticProps() {
-    console.log('server')
-    return {
-      props: {time: new Date().toISOString()}
-    }
+  console.log('server')
+  return {
+    props: { time: new Date().toISOString() },
   }
+}
 
-export default function SSG({time}) {
+export default function SSG({ time }) {
   return (
-      <>
-        <h1 className="title">
-          {time}
-        </h1>
-      </>
+    <>
+      <h1 className="title">{time}</h1>
+    </>
   )
 }
 

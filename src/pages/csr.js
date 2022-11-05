@@ -9,11 +9,9 @@ export default function CSR() {
     setTime(new Date().toISOString())
   })
   return (
-      <>
-        <h1 className="title">
-          {time}
-        </h1>
-      </>
+    <>
+      <h1 className="title">{time}</h1>
+    </>
   )
 }
 
